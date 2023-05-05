@@ -71,6 +71,20 @@ describe('Waf', () => {
     });
   });
 
+  it('should not generate waf Resources if api id is provided', () => {
+    const api = new Api(
+      given.appSyncConfig({
+        waf: {
+          enabled: false,
+          name: 'Waf',
+          rules: [],
+        },
+      }),
+      plugin,
+    );
+    expect(api.compileWafRules()).toEqual({});
+  });
+
   describe('Throttle rules', () => {
     const api = new Api(given.appSyncConfig(), plugin);
     const waf = new Waf(api, {
