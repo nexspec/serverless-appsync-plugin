@@ -5,6 +5,10 @@
 
 Deploy [AppSync](https://aws.amazon.com/appsync) API's in minutes using this [Serverless](https://www.serverless.com/) plugin.
 
+# DISCLAIMER
+
+This version of the plugin add the support for an appId.
+
 # Minimum requirements
 
 - [Node.js v16 or higher](https://nodejs.org)
